@@ -35,8 +35,8 @@ import{DataService} from '../data.service';
 })
 export class HomeComponent implements OnInit {
    itemCount : number;
-   btnText : string ='add an item';
-   goaltext: string='add an goal';
+   btnText : string ='Add your Goal';
+   goaltext: string='';
    goals=[];
 
 

@@ -1,9 +1,15 @@
-<p>
-this is what i am all about 
-<a href="" (click)="sendMeHome()"><strong>take me back</strong></a>
-</p>
-<ul>
-  <li *ngFor="let goal of goals">
-    {{goal}}
-  </li>
-</ul>
+
+<html>
+<head>
+</head>
+<body>
+    
+<h1>List of your goals <a routerLink="" (click)="sendMeHome()"><i style="margin-left: 100px; "class="material-icons">home</i></a></h1>
+
+ <ol>
+     <h2>  <li *ngFor="let goal of goals">
+          {{goal}}
+        </li> </h2> 
+</ol>
+    </body>
+    </html>

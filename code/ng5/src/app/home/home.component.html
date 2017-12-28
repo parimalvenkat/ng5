@@ -1,10 +1,10 @@
 
 <div class="container color-dark">
   <div class="col">
-    <p>add a wish list item</p>
+    <p>ADD YOUR GOAL LIST</p>
   </div>
   <div class="col">
-    <p>your wish list {{itemCount}}</p>
+    <p style="text-align:center">YOUR GOALS <span style="float:right">{{itemCount}}</span></p>
   </div>
 </div>
 
@@ -13,16 +13,18 @@
 <div class="container color-light" [@goals]="goals.length">
   <div class="col">
     <p class="sm">use this form below to add a new wish list goal. what do you want to do for your life?</p>
-    
     <form>
-      <input type="text" class="txt" name="item" placeholder="life goal.." [(ngModel)]="goaltext">
+      <input type="text" class="txt" name="item" required placeholder="life goal.." [(ngModel)]="goaltext"  >
       
       <input type="submit" class="btn"  [value]="btnText" (click)="addItem()">
+      <a href=""><i style="margin-left: 10px; "class="material-icons" >refresh</i>Referesh your goals</a>
     </form>
   </div>
   <div class="col">
-    <p class="life-container" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)">
-      {{goal}}
+   
+    <p class="life-container" *ngFor="let goal of goals; let i = index" >
+       
+      {{goal}} <i style="float:right"  class="fa fa-close" (click)="removeItem(i)" ></i>
     </p>
   </div>
 </div>
